@@ -1,1 +1,34 @@
-/*  your css code here. If applicable */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+img {
+  width: 100px;
+  object-fit: cover;
+  margin-right: 7px;
+}
+
+#reset {
+  padding: 7px 10px;
+  display:  none;
+}
+#verify {
+  padding: 7px 10px;
+  display: none;
+}
