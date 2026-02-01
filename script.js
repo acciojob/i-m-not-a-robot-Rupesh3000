@@ -24,6 +24,7 @@ const rerendorRendomImg = () => {
     const imgTag = document.createElement("img");
     imgTag.src = images[i].url;
     imgTag.className = images[i].id;
+    imgTag.setAttribute("data-ns-test", images[i].id);
     imgs.appendChild(imgTag);
   }
 
@@ -31,6 +32,7 @@ const rerendorRendomImg = () => {
   const imgTag = document.createElement("img");
   imgTag.src = images[rendomCopyImg].url;
   imgTag.className = images[rendomCopyImg].id;
+  imgTag.setAttribute("data-ns-test", images[rendomCopyImg].id);
   imgs.appendChild(imgTag);
 };
 
