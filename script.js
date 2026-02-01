@@ -8,7 +8,7 @@ const images = [
 
 const imgs = document.getElementById("imgs");
 const reset = document.getElementById("reset");
-const verify = document.getElementById("verify");
+const verify = document.getElementById("btn");
 let selectedImages = [];
 
 const rerendorRendomImg = () => {
