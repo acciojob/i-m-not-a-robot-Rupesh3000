@@ -42,22 +42,23 @@ const handalClicked = (e) => {
 
   // Do not allow more than 2 selections
   if (selectedImages.length === 2) return;
-
-  selectedImages.push(e.target);
-  console.log(selectedImages);
-
+  if (
+    e.target.tagName === "IMG" &&
+    !selectedImages.includes(e.target) &&
+    selectedImages.length < 2
+  ) {
+    selectedImages.push(e.target);
+  }
   // State 2: at least one image selected
   reset.style.display = "inline-block";
 
-  // State 3: exactly two images selected
   if (selectedImages.length === 2) {
-    verify.style.display = "inline-block";
+    verify.style.display = "block";
   }
 };
 
 reset.addEventListener("click", () => {
   selectedImages.length = 0;
-  console.log(selectedImages);
   imgs.innerHTML = "";
   verify.style.display = "none";
   reset.style.display = "none";
